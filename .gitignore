@@ -1,0 +1,10 @@
+.sass-cache
+*.lnk
+node_modules
+tmp
+dest
+design
+static/css/
+static/js
+public/
+resources/
