@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>{{block "title" .}}{{.Title}} &ndash; {{.Site.Title}}{{end}}</title>
+	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Orbitron" >
+	
+	{{ $main := resources.Get "scss/main.scss" | toCSS }}
+	{{ $cssBundle := slice $main | resources.Concat "css/bundle.css" }}
+	<link rel="stylesheet" type="text/css" href="{{ $cssBundle.Permalink }}">
+	{{block "css" . }}{{end}}
+</head>
+<body class="{{block "bodyClass" .}}{{end}}">
+	{{block "body" .}}
+		<p>Body block not implemented<p>
+	{{end}}
+	{{block "js" .}}{{end}}
+</body>
+</html>
