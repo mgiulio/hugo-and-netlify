@@ -1,7 +1,4 @@
 ---
-title: "home page"
+title: "home"
 draft: false
 ---
-
-* [Forms](/forms)
-

@@ -1,5 +1,12 @@
-{{define "bodyClass"}}{{end}}
+{{define "bodyClass"}}list{{end}}
 {{define "body"}}
 	<h1>{{.Title }}</h1>
-	{{.Content}}
+    {{.Content}}
+    {{ with .Pages }}
+        <ul>
+            {{ range . }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    {{ end }}
 {{end}}

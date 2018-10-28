@@ -1,5 +1,12 @@
-{{define "bodyClass"}}home{{end}}
+{{define "bodyClass"}}list{{end}}
 {{define "body"}}
-    <h1>Hello World: {{ .Title }}</h1>
+	<h1>{{ .Title }}</h1>
     {{ .Content }}
+    {{ with .Pages }}
+        <ul>
+            {{ range . }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    {{ end }}
 {{end}}

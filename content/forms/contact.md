@@ -15,6 +15,3 @@ draft: false
 
     <button type="submit">Send</button>
 </form>
-
-
-
