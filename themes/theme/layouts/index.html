@@ -1,8 +1,8 @@
-{{define "bodyClass"}}list{{end}}
+{{define "bodyClass"}}home{{end}}
 {{define "body"}}
 	<h1>{{ .Title }}</h1>
     {{ .Content }}
-    {{ with .Pages }}
+    {{ with .Sections }}
         <ul>
             {{ range . }}
                 <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
